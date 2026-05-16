@@ -1,0 +1,35 @@
+FROM ghcr.io/astral-sh/uv:python3.12-bookworm-slim
+
+WORKDIR /eval
+
+ENV UV_COMPILE_BYTECODE=1
+ENV UV_LINK_MODE=copy
+
+RUN apt-get update && \
+    apt-get install -y ca-certificates curl apt-transport-https lsb-release gnupg && \
+    curl -sL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null && \
+    AZ_REPO=$(lsb_release -cs) && \
+    echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | tee /etc/apt/sources.list.d/azure-cli.list && \
+    apt-get update && \
+    apt-get install -y azure-cli && \
+    rm -rf /var/lib/apt/lists/*
+COPY .python-version pyproject.toml uv.lock ./
+RUN --mount=type=cache,target=/root/.cache/uv \
+    uv sync --frozen --no-install-project --no-dev
+
+COPY generic_rag ./generic_rag
+COPY config.yaml ./config.yaml
+
+# ⚠️ Avoid copying .env into shared images; prefer runtime injection
+COPY .env ./.env
+
+RUN --mount=type=cache,target=/root/.cache/uv \
+    uv sync --frozen --no-dev
+
+RUN uv pip install -e .
+
+ENV PATH="/eval/.venv/bin:$PATH"
+
+ENTRYPOINT []
+
+CMD ["uv", "run", "generic_rag/evaluation_script.py"]

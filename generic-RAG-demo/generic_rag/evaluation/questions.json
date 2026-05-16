@@ -1,0 +1,110 @@
+[
+  {
+    "question": "What are the four dichotomies measured by the Myers-Briggs Type Indicator?",
+    "GT_answer": "Extraversion–Introversion, Sensing–Intuition, Thinking–Feeling, and Judging–Perceiving.",
+    "GT_source": ["updatedMBTIentryfordistribution (1).pdf"],
+    "should_answer": true
+  },
+  {
+    "question": "What is the theoretical foundation of the MBTI?",
+    "GT_answer": "It is based on Carl Jung’s theory of psychological types.",
+    "GT_source": ["updatedMBTIentryfordistribution (1).pdf"],
+    "should_answer": true
+  },
+  {
+    "question": "How is MBTI used in organizational settings according to King and Mason?",
+    "GT_answer": "It is used for team building, leadership development, and improving communication.",
+    "GT_source": ["updatedMBTIentryfordistribution (1).pdf"],
+    "should_answer": true
+  },
+  {
+    "question": "What trend did the authors observe in agreeableness across male- and female-dominated occupations?",
+    "GT_answer": "Female-dominated occupations showed higher levels of agreeableness over time.",
+    "GT_source": ["Big_Five_Personalities_Across_200_Years_A_Large-Sc.pdf"],
+    "should_answer": true
+  },
+  {
+    "question": "What data source was used to analyze personality descriptors over 200 years?",
+    "GT_answer": "A large-scale corpus of occupational descriptions from historical texts.",
+    "GT_source": ["Big_Five_Personalities_Across_200_Years_A_Large-Sc.pdf"],
+    "should_answer": true
+  },
+  {
+    "question": "Which Big Five trait showed the most consistent increase over time?",
+    "GT_answer": "Openness to experience.",
+    "GT_source": ["Big_Five_Personalities_Across_200_Years_A_Large-Sc.pdf"],
+    "should_answer": true
+  },
+  {
+    "question": "What method did Goldberg use to validate the Big Five structure?",
+    "GT_answer": "Factor analysis across multiple samples and trait clusters.",
+    "GT_source": ["goldberg.big-five-factorsstructure.jpsp.1990.pdf"],
+    "should_answer": true
+  },
+  {
+    "question": "What was the main contribution of Goldberg’s 1990 paper?",
+    "GT_answer": "It demonstrated the robustness of the Big Five factor structure across different datasets.",
+    "GT_source": ["goldberg.big-five-factorsstructure.jpsp.1990.pdf"],
+    "should_answer": true
+  },
+  {
+    "question": "How many trait adjectives were analyzed in Goldberg’s first study?",
+    "GT_answer": "1,431 trait adjectives grouped into 75 clusters.",
+    "GT_source": ["goldberg.big-five-factorsstructure.jpsp.1990.pdf"],
+    "should_answer": true
+  },
+  {
+    "question": "What is a key difference between MBTI and Enneagram according to the comparison study?",
+    "GT_answer": "MBTI focuses on cognitive preferences, while Enneagram emphasizes emotional motivations.",
+    "GT_source": ["A_Comparison_of_Myers_Briggs_Type_Indicator_of_Per.pdf"],
+    "should_answer": true
+  },
+  {
+    "question": "How many Enneagram types are there?",
+    "GT_answer": "Nine distinct personality types.",
+    "GT_source": ["A_Comparison_of_Myers_Briggs_Type_Indicator_of_Per.pdf"],
+    "should_answer": true
+  },
+  {
+    "question": "What was the conclusion of the MBTI vs Enneagram comparison?",
+    "GT_answer": "Both tools offer valuable insights but serve different psychological and educational purposes.",
+    "GT_source": ["A_Comparison_of_Myers_Briggs_Type_Indicator_of_Per.pdf"],
+    "should_answer": true
+  },
+  {
+    "question": "What is the purpose of the MBTI test used in the Dartmouth leadership session?",
+    "GT_answer": "To help future chief residents understand their personality types for leadership development.",
+    "GT_source": ["MBTI-Personality-Type-Test.pdf"],
+    "should_answer": true
+  },
+  {
+    "question": "What benefit does the web-based MBTI test offer over the paper version?",
+    "GT_answer": "It automatically scores results and provides a detailed type report.",
+    "GT_source": ["MBTI-Personality-Type-Test.pdf"],
+    "should_answer": true
+  },
+  {
+    "question": "What context was the MBTI test used in according to Harley Friedman?",
+    "GT_answer": "In a medical leadership training session for internal medicine residents.",
+    "GT_source": ["MBTI-Personality-Type-Test.pdf"],
+    "should_answer": true
+  },
+  {
+    "question": "What brain imaging techniques were used to validate MBTI types?",
+    "GT_answer": "",
+    "GT_source": [],
+    "should_answer": false
+  },
+  {
+    "question": "How does the Enneagram predict genetic markers for personality?",
+    "GT_answer": "",
+    "GT_source": [],
+    "should_answer": false
+  },
+  {
+    "question": "What machine learning model was used to extract Big Five traits from social media?",
+    "GT_answer": "",
+    "GT_source": [],
+    "should_answer": false
+  }
+]

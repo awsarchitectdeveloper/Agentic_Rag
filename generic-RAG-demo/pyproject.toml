@@ -1,0 +1,113 @@
+[project]
+name = "Sogeti-generic-RAG-demo"
+version = "0.1.0"
+description = "A Sogeti generic RAG demo"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "azure-identity>=1.24.0",
+    "azure-search-documents>=11.5.3",
+    "beautifulsoup4>=4.13.3",
+    "certifi>=2025.1.31",
+    "chainlit>=2.3.0",
+    "dotenv>=0.9.9",
+    "langchain>=0.3.20",
+    "langchain-aws>=0.2.15",
+    "langchain-chroma>=0.2.2",
+    "langchain-community>=0.3.19",
+    "langchain-google-vertexai>=2.0.15",
+    "langchain-huggingface>=0.1.2",
+    "langchain-mcp-adapters>=0.1.9",
+    "langchain-ollama>=0.2.3",
+    "langchain-openai>=0.3.7",
+    "langchain-text-splitters>=0.3.6",
+    "langchain-together>=0.3.0",
+    "langchain-unstructured>=0.1.6",
+    "langgraph>=0.3.5",
+    "matplotlib>=3.10.1",
+    "mcp>=1.6.0",
+    "mlflow>=2.8.0",
+    "pillow>=11.1.0",
+    "pymupdf>=1.25.3",
+    "unstructured[pdf]>=0.16.23",
+    "azure-storage-blob>=12.19.0",
+    "azure-identity>=1.14.0",
+    "chromadb>=0.6.3",
+     "docling>=2.61.2",
+    "easyocr>=1.7.2",
+    "numpy>=1.24.0,<2.0.0",
+    "azure-identity-broker>=1.0.0",
+]
+
+[project.optional-dependencies]
+torch-cpu = [
+    "torch==2.4.1+cpu",
+    "torchvision==0.19.1+cpu",
+    "torchaudio==2.4.1+cpu",
+]
+torch-cuda = [
+    "torch>=2.0.0,<2.8.0",
+    "torchvision>=0.15.0,<0.20.0",
+    "torchaudio>=2.0.0,<2.5.0",
+]
+
+[tool.uv]
+package = true
+conflicts = [
+    [
+        { extra = "torch-cpu" },
+        { extra = "torch-cuda" },
+    ],
+]
+allow-insecure-host = ["download.pytorch.org"]
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cpu", extra = "torch-cpu" },
+    { index = "pytorch-cuda", extra = "torch-cuda" },
+]
+torchvision = [
+    { index = "pytorch-cpu", extra = "torch-cpu" },
+    { index = "pytorch-cuda", extra = "torch-cuda" },
+]
+torchaudio = [
+    { index = "pytorch-cpu", extra = "torch-cpu" },
+    { index = "pytorch-cuda", extra = "torch-cuda" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cuda"
+url = "https://download.pytorch.org/whl/cu121"
+explicit = true
+
+[tool.setuptools]
+packages = ["generic_rag"]
+
+[tool.setuptools.exclude-package-data]
+generic_rag = ["data"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.format]
+quote-style = "double"
+skip-magic-trailing-comma = true
+line-ending = "auto"
+docstring-code-format = false
+
+[tool.black]
+line-length = 120
+
+[dependency-groups]
+dev = [
+    "ruff>=0.11.0",
+    "black>=22.0",
+    "pre-commit>=4.3.0",
+    "pytest>=8.4.1",
+    "pytest-cov>=6.2.1",
+]

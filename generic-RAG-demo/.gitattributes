@@ -1,0 +1,8 @@
+* text=auto
+*.md text
+*.py text
+*.yaml text
+*.yml text
+*.json text
+*.tf text
+docs/* text

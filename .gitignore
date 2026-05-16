@@ -1,0 +1,32 @@
+generic-RAG-demo/.pre-commit-cache/
+generic-RAG-demo/mlflow.db
+generic-RAG-demo/.opencode/
+generic-RAG-demo/.gitea/
+
+# Local secrets / credentials
+generic-RAG-demo/config.yaml
+.env
+.env.*
+!.env.example
+
+# Terraform local state and sensitive files
+*.tfstate
+*.tfstate.backup
+*.tfvars
+*.tfvars.json
+**/.terraform/
+generic-RAG-demo/infra/terraform.tfstate.d/
+
+# Local secret config
+generic-RAG-demo/config.yaml
+.env
+.env.*
+!.env.example
+
+# Terraform state and sensitive local files
+*.tfstate
+*.tfstate.backup
+*.tfvars
+*.tfvars.json
+**/.terraform/
+generic-RAG-demo/infra/terraform.tfstate.d/
